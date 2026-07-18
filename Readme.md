@@ -1,135 +1,88 @@
 Explainable AI-Based Heart Disease Risk Prediction and Remote Monitoring System
 
-Overview:
-Cardiovascular Disease (CVD) is one of the leading causes of mortality worldwide. Early detection of heart disease can significantly improve patient outcomes and reduce healthcare costs. Traditional diagnosis methods often rely on periodic clinical assessments and may fail to identify risks at an early stage.
-This project proposes an Explainable Artificial Intelligence (XAI)-based Heart Disease Risk Prediction and Remote Monitoring System that combines machine learning techniques with wearable sensor and clinical data to provide accurate, real-time, and interpretable cardiovascular risk assessment.
-The system predicts the likelihood of heart disease, explains the factors influencing the prediction, and supports continuous patient monitoring through a user-friendly dashboard.
+# Explainable AI-Based Wearable Heart Disease Risk Prediction and Remote Monitoring System
 
-Problem Statement:
-Existing heart disease prediction systems primarily focus on improving prediction accuracy but often lack interpretability, real-time monitoring capabilities, and efficient handling of heterogeneous healthcare data. Most machine learning models operate as black-box systems, making it difficult for clinicians to understand and trust the predictions.
-This project aims to develop an intelligent and explainable framework capable of providing accurate cardiovascular risk prediction, transparent decision-making, and remote patient monitoring using clinical and wearable sensor data.
+## Overview
 
-Objectives:
-Predict heart disease risk using machine learning and deep learning techniques.
-Improve prediction accuracy through advanced preprocessing and feature engineering.
-Handle missing values and class imbalance in healthcare datasets.
-Integrate Explainable AI techniques such as SHAP and LIME.
-Provide real-time patient monitoring and visualization.
-Generate personalized risk alerts for patients and healthcare professionals.
+Cardiovascular disease (CVD) is one of the leading causes of death worldwide. Early detection and continuous monitoring can significantly improve patient outcomes. This project proposes an **IoT-based wearable heart disease risk prediction system** that combines physiological sensor data and machine learning with **Explainable Artificial Intelligence (XAI)** to provide accurate, transparent, and real-time cardiovascular risk assessment.
 
-Proposed Architecture:
-Data Collection
-Clinical patient records
-Wearable sensor data (ECG, Heart Rate, Blood Pressure, SpO₂)
-Data Preprocessing
-Missing value handling
-Noise removal
-Data normalization
-Feature selection
-Model Development
-Random Forest
-XGBoost
-Support Vector Machine
-CNN-LSTM Hybrid Model
-Explainable AI Module
-SHAP (SHapley Additive Explanations)
-LIME (Local Interpretable Model-Agnostic Explanations)
-Risk Prediction Engine
-Low Risk
-Medium Risk
-High Risk
-Dashboard and Alert System
-Real-time monitoring
-Visualization of health parameters
-Risk notifications
-Dataset
+The wearable device continuously collects health parameters such as **Heart Rate, SpO₂, and ECG**, which are analyzed using machine learning models. The prediction results are explained using **SHAP**, allowing healthcare professionals to understand the factors influencing each prediction. A web-based dashboard enables real-time monitoring and alert generation.
 
-Possible datasets:
+---
 
-UCI Heart Disease Dataset
-Cleveland Heart Disease Dataset
-Kaggle Heart Disease Dataset
-Wearable Sensor Datasets
-PhysioNet ECG Dataset
-Technologies Used
+## Problem Statement
 
-Programming Language:
-Python
-Machine Learning Libraries
-Scikit-Learn
-TensorFlow
-Keras
-XGBoost
-Explainable AI
-SHAP
-LIME
-Data Processing
-NumPy
-Pandas
-Visualization
-Matplotlib
-Seaborn
-Plotly
-Web Dashboard
-Flask / Streamlit
-HTML
-CSS
-JavaScript
-Methodology
-Step 1: Data Acquisition
+Most existing heart disease prediction systems focus only on prediction accuracy and lack continuous monitoring, explainability, and integration with wearable devices. Many AI models operate as black boxes, making it difficult for clinicians to interpret predictions.
 
-Collect patient clinical information and wearable sensor measurements.
+This project aims to develop an **Explainable AI-based wearable monitoring system** that provides accurate heart disease risk prediction, transparent decision-making, and real-time remote patient monitoring.
 
-Step 2: Data Preprocessing
-Remove duplicates
-Handle missing values
-Normalize features
-Balance classes using SMOTE
-Step 3: Feature Engineering
+---
 
-Identify the most influential cardiovascular risk factors.
+## Objectives
 
-Step 4: Model Training
+- Develop an IoT-based wearable device for continuous health monitoring.
+- Predict heart disease risk using machine learning models.
+- Improve prediction performance through data preprocessing and feature engineering.
+- Integrate SHAP for explainable AI.
+- Enable remote patient monitoring through a dashboard.
+- Generate early risk alerts for patients and healthcare professionals.
 
-Train multiple machine learning and deep learning models.
+---
 
-Step 5: Model Evaluation
+## Proposed Architecture
 
-Evaluate using:
+```text
+Wearable Device (ESP32 + Sensors)
+              ↓
+      Data Collection
+              ↓
+     Data Preprocessing
+              ↓
+ Heart Disease Prediction
+ (Random Forest / XGBoost)
+              ↓
+     SHAP Explainability
+              ↓
+ Remote Monitoring Dashboard
+              ↓
+      Risk Alerts
+```
 
-Accuracy
-Precision
-Recall
-F1-Score
-ROC-AUC
-Step 6: Explainability
+---
 
-Generate explanations showing which features contributed to the prediction.
+## Technologies Used
 
-Step 7: Dashboard Deployment
+### Hardware
+- ESP32
+- MAX30102 (Heart Rate & SpO₂)
+- AD8232 ECG Sensor (Optional)
 
-Display patient health metrics and prediction results in real time.
+### Software
+- Python
+- Scikit-learn
+- TensorFlow / Keras
+- XGBoost
+- SHAP
+- Pandas
+- NumPy
+- Streamlit / Flask
 
-Expected Outcomes
-Improved heart disease prediction accuracy.
-Early identification of cardiovascular risks.
-Clinically interpretable predictions.
-Enhanced patient monitoring.
-Better decision support for healthcare professionals.
-Future Enhancements
-Integration with IoT wearable devices.
-Federated learning for privacy-preserving healthcare.
-Blockchain-based medical data security.
-Mobile application support.
-Cloud deployment for large-scale healthcare systems.
-Research Contribution
+---
 
-The proposed framework contributes to healthcare AI by combining:
+## Expected Outcomes
 
-Heart Disease Prediction
-Explainable Artificial Intelligence (XAI)
-Wearable Sensor Analytics
-Remote Patient Monitoring
-Real-Time Clinical Decision Support
+- Real-time wearable health monitoring.
+- Accurate heart disease risk prediction.
+- Explainable AI-based clinical decision support.
+- Continuous remote patient monitoring.
+- Early detection of cardiovascular risk.
 
-This improves trust, transparency, and usability of AI-driven healthcare systems.
+---
+
+## Future Enhancements
+
+- Federated Learning
+- Mobile Application
+- Cloud Deployment
+- Smartwatch Integration
+- Blockchain-based Medical Data Security
