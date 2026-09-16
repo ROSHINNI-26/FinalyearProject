@@ -1,14 +1,15 @@
-Explainable AI-Based Heart Disease Risk Prediction and Remote Monitoring System
+AI-Based Heart Disease Risk Prediction and Remote Monitoring System
 
-# Explainable AI-Based Wearable Heart Disease Risk Prediction and Remote Monitoring System
 
 ## Overview
 
-Cardiovascular disease (CVD) is one of the leading causes of death worldwide. Early detection and continuous monitoring can significantly improve patient outcomes. This project proposes an **IoT-based wearable heart disease risk prediction system** that combines physiological sensor data and machine learning with **Explainable Artificial Intelligence (XAI)** to provide accurate, transparent, and real-time cardiovascular risk assessment.
+Develop an IoT-based wearable device for continuous health monitoring.
+Predict heart disease risk using machine learning models.
+Improve prediction performance through data preprocessing and feature engineering.
+Integrate SHAP for Explainable AI.
+Enable remote patient monitoring through a dashboard.
+Generate early risk alerts for patients and healthcare professionals.
 
-The wearable device continuously collects health parameters such as **Heart Rate, SpO₂, and ECG**, which are analyzed using machine learning models. The prediction results are explained using **SHAP**, allowing healthcare professionals to understand the factors influencing each prediction. A web-based dashboard enables real-time monitoring and alert generation.
-
----
 
 ## Problem Statement
 
@@ -31,31 +32,47 @@ This project aims to develop an **Explainable AI-based wearable monitoring syste
 
 ## Proposed Architecture
 
-```text
-Wearable Device (ESP32 + Sensors)
-              ↓
-      Data Collection
-              ↓
-     Data Preprocessing
-              ↓
- Heart Disease Prediction
- (Random Forest / XGBoost)
-              ↓
-     SHAP Explainability
-              ↓
- Remote Monitoring Dashboard
-              ↓
-      Risk Alerts
-```
-
----
+                 START
+                   ↓
+        Wearable Device Setup
+       (ESP32 + Sensors)
+                   ↓
+            Data Collection
+       (HR + SpO₂ + ECG*)
+                   ↓
+         Data Preprocessing
+                   ↓
+         Feature Engineering
+                   ↓
+       Feature Extraction
+                   ↓
+      Heart Disease Prediction
+                   ↓
+        Risk Classification
+      (Low / Medium / High)
+                   ↓
+          SHAP Explainability
+                   ↓
+      Remote Monitoring
+           Dashboard
+                   ↓
+            Risk Alerts
+                   ↓
+                  END
 
 ## Technologies Used
 
-### Hardware
-- ESP32
-- MAX30102 (Heart Rate & SpO₂)
-- AD8232 ECG Sensor (Optional)
+**Hardware**
+ESP32
+Main microcontroller of the wearable system.
+Handles sensor data acquisition.
+Provides wireless communication for remote monitoring.
+MAX30102
+Used for Heart Rate measurement.
+Used for SpO₂ measurement.
+AD8232 ECG Sensor — Optional
+Used for ECG signal acquisition.
+Can provide additional cardiac information for prediction.
 
 ### Software
 - Python
@@ -71,18 +88,27 @@ Wearable Device (ESP32 + Sensors)
 
 ## Expected Outcomes
 
-- Real-time wearable health monitoring.
-- Accurate heart disease risk prediction.
-- Explainable AI-based clinical decision support.
-- Continuous remote patient monitoring.
-- Early detection of cardiovascular risk.
-
+1. Real-Time Wearable Health Monitoring
+The system should enable continuous monitoring of physiological parameters through the wearable device.
+2. Heart Disease Risk Prediction
+Machine-learning models should analyze the collected/processed health data and provide a heart-disease risk prediction.
+3. Explainable AI-Based Clinical Decision Support
+SHAP should provide explanations for the model's predictions, helping users understand the contribution of different features.
+4. Continuous Remote Patient Monitoring
+The dashboard should allow health information and prediction results to be monitored remotely.
+5. Early Detection of Cardiovascular Risk
+The system is intended to identify potentially elevated cardiovascular risk early and generate alerts based on predefined criteria.
 ---
 
 ## Future Enhancements
 
-- Federated Learning
-- Mobile Application
-- Cloud Deployment
-- Smartwatch Integration
-- Blockchain-based Medical Data Security
+--Federated Learning
+Multiple healthcare devices or institutions could train models collaboratively without directly sharing their raw patient data.
+--Mobile Application
+The dashboard functionality could be extended into an Android/iOS mobile application.
+--Cloud Deployment
+The system could be deployed on cloud infrastructure for scalable remote monitoring and data storage.
+--Smartwatch Integration
+The wearable system could be integrated with smartwatch platforms for easier continuous health monitoring.
+--Blockchain-Based Medical Data Security
+Blockchain could be explored for improving the security, integrity and controlled sharing of medical data.
